@@ -20,7 +20,6 @@ class PayPal(Pago):
         return "El pago fue procesado con PayPal."
 
 
-# Ejemplo de uso
 if __name__ == "__main__":
 
     pago1 = TarjetaCredito()
