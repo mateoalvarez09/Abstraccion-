@@ -1,0 +1,29 @@
+from abc import ABC, abstractmethod
+
+
+class Notificacion(ABC):
+
+    @abstractmethod
+    def enviar(self):
+        pass
+
+
+class Email(Notificacion):
+
+    def enviar(self):
+        return "La notificación fue enviada por Email"
+
+
+class SMS(Notificacion):
+
+    def enviar(self):
+        return "La notificación fue enviada por SMS"
+
+
+if __name__ == "__main__":
+
+    notificacion1 = Email()
+    notificacion2 = SMS()
+
+    print(notificacion1.enviar())
+    print(notificacion2.enviar())
